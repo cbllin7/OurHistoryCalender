@@ -10,12 +10,15 @@
     <StackLayout>
         <controls:Calendar
             Padding="10,0,10,0"   
-                           SelectedBorderWidth="4"   
-                           DisabledBorderColor="Black"  
-                           ShowNumberOfWeek="false"  
-                           StartDay="Monday"  
-                           TitleLabelTextColor="Purple"  
-                           TitleLeftArrowTextColor="Blue" >
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            SelectedBorderWidth="4"   
+            DisabledBorderColor="Black"  
+            ShowNumberOfWeek="false"  
+            StartDay="Sunday"  
+            TitleLabelTextColor="Purple"  
+            TitleLeftArrowTextColor="Blue"
+            >
 
         </controls:Calendar>
     </StackLayout>
