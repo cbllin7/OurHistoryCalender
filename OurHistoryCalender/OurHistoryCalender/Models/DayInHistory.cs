@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OurHistoryCalender.Models
 {
-    class DayInHistoryModel
+    public class DayInHistory
     {
         public DateTime DateInHistory { get; set; }
         public string BriefDescription { get; set; }

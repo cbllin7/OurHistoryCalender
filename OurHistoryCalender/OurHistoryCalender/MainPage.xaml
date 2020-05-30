@@ -16,8 +16,8 @@
             DisabledBorderColor="Black"  
             ShowNumberOfWeek="false"  
             StartDay="Sunday"  
-            TitleLabelTextColor="Purple"  
-            TitleLeftArrowTextColor="Blue"
+            TitleLabelTextColor="Green"  
+            TitleLeftArrowTextColor="Red"
             >
 
         </controls:Calendar>
