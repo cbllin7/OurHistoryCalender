@@ -25,7 +25,7 @@ namespace OurHistoryCalender
         }
         public void getEvents()
         {
-            var events = _calenderEventService.getDaysInHistory();
+            calendar.SpecialDates = (ICollection<SpecialDate>)_calenderEventService.getSpecialDays();
 
         }
     }

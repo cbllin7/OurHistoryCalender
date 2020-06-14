@@ -14,14 +14,9 @@ namespace OurHistoryCalender.Services
 {
     public class CalenderEventService : ICalenderEventService
     {
-        public void EventAdd(DayInHistory dayInHistory)
+        public IEnumerable<DayInHistory> getDaysInHistory()
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<SpecialDate> getDaysInHistory()
-        {
-            IList<SpecialDate> specialDates = new List<SpecialDate>();
+            IEnumerable<DayInHistory> daysInHistory;
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
             Stream stream = assembly.GetManifestResourceStream("CalenderEvents.json");
 
@@ -29,19 +24,48 @@ namespace OurHistoryCalender.Services
             {
 
                 var json = reader.ReadToEnd();
-                var data = JsonConvert.DeserializeObject<IEnumerable<DayInHistory>>(json);
-                foreach (DayInHistory dayInHistory in data)
+                daysInHistory = JsonConvert.DeserializeObject<IEnumerable<DayInHistory>>(json);
+            }
+        
+            return daysInHistory;
+        
+        }
+
+        public IEnumerable<SpecialDate> getSpecialDays()
+        {
+            IList<SpecialDate> specialDates = new List<SpecialDate>();
+            var daysInHistory = getDaysInHistory();
+                foreach (DayInHistory dayInHistory in daysInHistory)
                 {
                     SpecialDate specialDate = new SpecialDate(dayInHistory.DateInHistory);
                     specialDate.BackgroundImage.File = dayInHistory.Image;
                 }
-            }
             return specialDates;
+        }
+
+        public void EventAdd(DayInHistory dayInHistory)
+        {
+            throw new NotImplementedException();
         }
 
         public void RemoveEvent()
         {
             throw new NotImplementedException();
+        }
+
+        public void Save(IEnumerable<DayInHistory> dayInHistories)
+        {
+            var jsonfile = "CalenderEvents.json";
+            try
+            {
+                string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(dayInHistories,
+                                       Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(jsonfile, newJsonResult);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Add Error : " + ex.Message.ToString());
+            }
         }
     }
 }

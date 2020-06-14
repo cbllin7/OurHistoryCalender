@@ -11,7 +11,9 @@ namespace OurHistoryCalender.Services
     public interface ICalenderEventService
     {
         void EventAdd(DayInHistory dayInHistory);
-        IEnumerable<SpecialDate> getDaysInHistory();
+        IEnumerable<DayInHistory> getDaysInHistory();
+        IEnumerable<SpecialDate> getSpecialDays();
         void RemoveEvent();
+        void Save(IEnumerable<DayInHistory> dayInHistories);
     }
 }
