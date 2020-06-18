@@ -22,6 +22,7 @@ namespace OurHistoryCalender
         public MainPage()
         {
             InitializeComponent();
+            getEvents();
         }
         public void getEvents()
         {

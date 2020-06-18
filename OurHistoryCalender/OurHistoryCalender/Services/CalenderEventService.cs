@@ -18,7 +18,7 @@ namespace OurHistoryCalender.Services
         {
             IEnumerable<DayInHistory> daysInHistory;
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("CalenderEvents.json");
+            Stream stream = assembly.GetManifestResourceStream("OurHistoryCalender.CalenderEvents.json");
 
             using (var reader = new System.IO.StreamReader(stream))
             {
