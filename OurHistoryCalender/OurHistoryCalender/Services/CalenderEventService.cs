@@ -31,14 +31,13 @@ namespace OurHistoryCalender.Services
         
         }
 
-        public IEnumerable<SpecialDate> getSpecialDays()
+        public ICollection<SpecialDate> getSpecialDays()
         {
             IList<SpecialDate> specialDates = new List<SpecialDate>();
             var daysInHistory = getDaysInHistory();
                 foreach (DayInHistory dayInHistory in daysInHistory)
                 {
                     SpecialDate specialDate = new SpecialDate(dayInHistory.DateInHistory);
-                    specialDate.BackgroundImage.File = dayInHistory.Image;
                 }
             return specialDates;
         }

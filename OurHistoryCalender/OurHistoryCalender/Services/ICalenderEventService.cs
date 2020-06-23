@@ -12,7 +12,7 @@ namespace OurHistoryCalender.Services
     {
         void EventAdd(DayInHistory dayInHistory);
         IEnumerable<DayInHistory> getDaysInHistory();
-        IEnumerable<SpecialDate> getSpecialDays();
+        ICollection<SpecialDate> getSpecialDays();
         void RemoveEvent();
         void Save(IEnumerable<DayInHistory> dayInHistories);
     }

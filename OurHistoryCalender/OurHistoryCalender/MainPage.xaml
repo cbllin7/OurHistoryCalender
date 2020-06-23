@@ -18,6 +18,8 @@
             StartDay="Sunday"  
             TitleLabelTextColor="Green"  
             TitleLeftArrowTextColor="Red"
+            SelectedDate="{Binding CalendarSelectedDate, Mode=TwoWay}"
+            x:Name="calender"
             >
 
         </controls:Calendar>

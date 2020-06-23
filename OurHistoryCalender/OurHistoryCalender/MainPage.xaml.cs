@@ -17,17 +17,21 @@ namespace OurHistoryCalender
     {
         Calendar calendar = new Calendar();
         ICalenderEventService _calenderEventService = new CalenderEventService();
-        SpecialDate specialDate;
-        
         public MainPage()
         {
             InitializeComponent();
             getEvents();
+            calendar.DateClicked += Calendar_DateClicked;
         }
+
+        private async void Calendar_DateClicked(object sender, DateTimeEventArgs e)
+        {
+           await DisplayAlert("Alert", "This has been clicked", "Ok");
+        }
+
         public void getEvents()
         {
-            calendar.SpecialDates = (ICollection<SpecialDate>)_calenderEventService.getSpecialDays();
-
+            calendar.SpecialDates = _calenderEventService.getSpecialDays();
         }
     }
 }
