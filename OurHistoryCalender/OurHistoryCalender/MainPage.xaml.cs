@@ -20,11 +20,10 @@ namespace OurHistoryCalender
         public MainPage()
         {
             InitializeComponent();
-            getEvents();
-            calendar.DateClicked += Calendar_DateClicked;
+            getEvents(); 
         }
 
-        private async void Calendar_DateClicked(object sender, DateTimeEventArgs e)
+        async private void Calendar_DateClicked(object sender, DateTimeEventArgs e)
         {
            await DisplayAlert("Alert", "This has been clicked", "Ok");
         }

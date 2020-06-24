@@ -19,6 +19,7 @@
             TitleLabelTextColor="Green"  
             TitleLeftArrowTextColor="Red"
             SelectedDate="{Binding CalendarSelectedDate, Mode=TwoWay}"
+            DateClicked="Calendar_DateClicked"
             x:Name="calender"
             >
 
