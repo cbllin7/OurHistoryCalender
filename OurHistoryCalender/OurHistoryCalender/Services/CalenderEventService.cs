@@ -38,6 +38,7 @@ namespace OurHistoryCalender.Services
                 foreach (DayInHistory dayInHistory in daysInHistory)
                 {
                     SpecialDate specialDate = new SpecialDate(dayInHistory.DateInHistory);
+                specialDates.Add(specialDate);
                 }
             return specialDates;
         }

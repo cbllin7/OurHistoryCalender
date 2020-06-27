@@ -25,7 +25,8 @@ namespace OurHistoryCalender
 
         async private void Calendar_DateClicked(object sender, DateTimeEventArgs e)
         {
-           await DisplayAlert("Alert", "This has been clicked", "Ok");
+            var dateSelected = e.DateTime.ToString("MM/dd/yyyy");
+            await DisplayAlert("Alert", dateSelected, "Ok");
         }
 
         public void getEvents()
