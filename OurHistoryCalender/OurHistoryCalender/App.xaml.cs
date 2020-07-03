@@ -1,6 +1,5 @@
-﻿using System;
+﻿using OurHistoryCalender.Notifications;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace OurHistoryCalender
 {
@@ -9,7 +8,8 @@ namespace OurHistoryCalender
         public App()
         {
             InitializeComponent();
-
+            // use the dependency service to get a platform-specific implementation and initialize it
+            DependencyService.Get<INotificationManager>().Initialize();
             MainPage = new MainPage();
         }
 

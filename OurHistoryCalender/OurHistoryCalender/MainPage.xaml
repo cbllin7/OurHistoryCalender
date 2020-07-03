@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="OurHistoryCalender.MainPage">
 
-    <StackLayout>
+    <StackLayout x:Name="stackLayout">
         <controls:Calendar
             Padding="10,0,10,0"   
             HorizontalOptions="FillAndExpand"
@@ -24,6 +24,10 @@
             >
 
         </controls:Calendar>
+        <Button Text="Create Notification"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Clicked="OnScheduleClick"/>
     </StackLayout>
 
 </ContentPage>
