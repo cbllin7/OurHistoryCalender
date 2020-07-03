@@ -7,7 +7,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Content;
-using OurHistoryCalender.Droid.AndriodNotifications;
 using Xamarin.Forms;
 using OurHistoryCalender.Notifications;
 

@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
-using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.App;
-using Android.Views;
-using Android.Widget;
 using OurHistoryCalender.Notifications;
+using System;
+using Xamarin.Forms;
 using AndroidApp = Android.App.Application;
 
-namespace OurHistoryCalender.Droid.AndriodNotifications
+
+[assembly: Dependency(typeof(OurHistoryCalender.Droid.AndroidNotificationManager))]
+namespace OurHistoryCalender.Droid
 {
     public class AndroidNotificationManager : INotificationManager
     {
@@ -56,6 +51,7 @@ namespace OurHistoryCalender.Droid.AndriodNotifications
                 .SetContentIntent(pendingIntent)
                 .SetContentTitle(title)
                 .SetContentText(message)
+                .SetSmallIcon(Resource.Drawable.icon)
                 .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
 
             var notification = builder.Build();
