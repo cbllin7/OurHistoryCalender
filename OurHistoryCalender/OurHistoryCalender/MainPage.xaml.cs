@@ -12,9 +12,9 @@ namespace OurHistoryCalender
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        Calendar calendar = new Calendar();
-        ICalenderEventService _calenderEventService = new CalenderEventService();
-        INotificationManager notificationManager;
+        private Calendar calendar = new Calendar();
+        private ICalenderEventService _calenderEventService = new CalenderEventService();
+        private INotificationManager notificationManager;
         int notificationNumber = 0;
         public MainPage()
         {

@@ -13,14 +13,16 @@ namespace OurHistoryCalender.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutDateInHistory : ContentPage
     {
-        public AboutDateInHistory()
+        private readonly DayInHistory _dayInHistory;
+        public AboutDateInHistory(DayInHistory dayInHistory)
         {
+            _dayInHistory = dayInHistory;
             InitializeComponent();
         }
 
-        public string GetHistory(DayInHistory selectedDayInHistory)
+        public string GetHistory()
         {
-            return selectedDayInHistory.BriefDescription;
+            return _dayInHistory.BriefDescription;
         }
     }
 }
