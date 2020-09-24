@@ -10,6 +10,8 @@
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding newDayInHistory.DayInHistoryTitle}"/>
+            <Entry Text="{Binding newDayInHistory.BriefDescription}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
