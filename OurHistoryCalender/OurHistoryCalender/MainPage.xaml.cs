@@ -1,4 +1,5 @@
 ﻿using OurHistoryCalender.Notifications;
+using OurHistoryCalender.Pages;
 using OurHistoryCalender.Services;
 using System;
 using System.ComponentModel;
@@ -40,10 +41,12 @@ namespace OurHistoryCalender
         }
         void OnScheduleClick(object sender, EventArgs e)
         {
-            notificationNumber++;
-            string title = $"Local Notification #{notificationNumber}";
-            string message = $"You have now received {notificationNumber} notifications!";
-            notificationManager.ScheduleNotification(title, message);
+            var p = new History();
+            //notificationNumber++;
+            //string title = $"Local Notification #{notificationNumber}";
+            //string message = $"You have now received {notificationNumber} notifications!";
+            //notificationManager.ScheduleNotification(title, message);
+            Navigation.PushModalAsync(p);
         }
 
         void ShowNotification(string title, string message)

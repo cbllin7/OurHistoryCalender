@@ -1,5 +1,4 @@
 ﻿using OurHistoryCalender.Models;
-using OurHistoryCalender.Notifications;
 using OurHistoryCalender.Services;
 using System;
 using System.Collections;
@@ -14,21 +13,27 @@ using Xamarin.Forms.Xaml;
 namespace OurHistoryCalender.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HistorySelections : ContentPage
+    public partial class History : ContentPage
     {
+
         private ICalenderEventService _calenderEventService;
         private IEnumerable<DayInHistory> _dayInHistory;
-        
-        public HistorySelections()
+
+        public History()
         {
             InitializeComponent();
             _calenderEventService = new CalenderEventService();
-            listView.ItemsSource = (IEnumerable)GetTaskListAsync();
+            listView.ItemsSource = _calenderEventService.getDaysInHistory();
         }
 
         private async Task OnItemClickAsync(DayInHistory dayInHistory)
         {
-            await Navigation.PushModalAsync(new AboutDateInHistory(dayInHistory));
+            await Navigation.PushAsync(new AboutDateInHistory(dayInHistory));
+        }
+
+        public async Task OnCreateClickAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new AddSpecialDay());
         }
 
         private async Task<IEnumerable<DayInHistory>> GetTaskListAsync()

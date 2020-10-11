@@ -1,14 +1,16 @@
 [
   {
+    "DayInHistoryTitle": "My Birth Day",
     "DateInHistory": "05-24-1989",
     "BriefDescription": "It's my birthday",
-    "Image": "bday.png",
+    "DayInHistoryImage": "bday.png",
     "Source": "www.chrisbillings.wix.com"
   },
   {
-    "DateInHistory": "05-24-1989",
+    "DayInHistoryTitle": "Donyea Birth Day",
+    "DateInHistory": "05-09-1900",
     "BriefDescription": "It's my birthday",
-    "Image": "bday.png",
+    "DayInHistoryImage": "bday.png",
     "Source": "www.chrisbillings.wix.com"
   }
 ] 
