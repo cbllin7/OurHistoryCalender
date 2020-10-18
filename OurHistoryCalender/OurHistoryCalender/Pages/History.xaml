@@ -4,8 +4,8 @@
              x:Class="OurHistoryCalender.Pages.History">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Add" BackgroundColor="White" TextColor="DarkGray" HorizontalOptions="StartAndExpand"/>
-            <ListView x:Name="listView" >
+            <Button Clicked="OnCreateClickAsync" Text="Add"></Button>
+            <ListView x:Name="listView" ItemSelected="OnItemClickAsync" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell Text="{Binding DayInHistoryTitle}" Detail="{Binding DateInHistory}" ImageSource="{Binding DayInHistoryImage}">

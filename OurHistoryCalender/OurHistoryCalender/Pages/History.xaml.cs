@@ -26,20 +26,16 @@ namespace OurHistoryCalender.Pages
             listView.ItemsSource = _calenderEventService.getDaysInHistory();
         }
 
-        private async Task OnItemClickAsync(DayInHistory dayInHistory)
+        void OnItemClickAsync(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new AboutDateInHistory(dayInHistory));
+            var myListView = (ListView)sender;
+            var selectedDayInHistory = (DayInHistory)myListView.SelectedItem;
+            Navigation.PushModalAsync(new AboutDateInHistory(selectedDayInHistory));
         }
 
-        public async Task OnCreateClickAsync(object sender, EventArgs e)
+        void OnCreateClickAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new AddSpecialDay());
-        }
-
-        private async Task<IEnumerable<DayInHistory>> GetTaskListAsync()
-        {
-            _dayInHistory = _calenderEventService.getDaysInHistory();
-            return await Task.FromResult(_dayInHistory);
+            Navigation.PushModalAsync(new AddSpecialDay());
         }
     }
 }
