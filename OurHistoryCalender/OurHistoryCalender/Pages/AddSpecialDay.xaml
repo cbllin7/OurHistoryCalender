@@ -7,11 +7,13 @@
              x:Class="OurHistoryCalender.Pages.AddSpecialDay">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Add Day in history"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Entry Text="{Binding newDayInHistory.DayInHistoryTitle}"/>
-            <Entry Text="{Binding newDayInHistory.BriefDescription}"/>
+            <Entry x:Name="DayInHistory" Placeholder="Day In History" Text="{Binding newDayInHistory.DayInHistoryTitle}"/>
+            
+            <Entry Placeholder="About Day" Text="{Binding newDayInHistory.BriefDescription}"/>
+            <Button Clicked="Button_Clicked" Text="Add Day" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

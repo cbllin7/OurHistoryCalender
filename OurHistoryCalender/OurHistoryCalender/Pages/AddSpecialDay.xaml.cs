@@ -1,6 +1,7 @@
 ﻿using OurHistoryCalender.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,11 @@ namespace OurHistoryCalender.Pages
         {
             InitializeComponent();
             newDayInHistory = new DayInHistory();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Debug.WriteLine(newDayInHistory);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace OurHistoryCalender
         }
         void OnScheduleClick(object sender, EventArgs e)
         {
-            var p = new History();
+            var p = new NavigationPage(new History());
             //notificationNumber++;
             //string title = $"Local Notification #{notificationNumber}";
             //string message = $"You have now received {notificationNumber} notifications!";

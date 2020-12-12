@@ -13,10 +13,12 @@
 
   <ItemGroup>
     <None Remove="CalenderEvents.json" />
+    <None Remove="Images\plus.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="CalenderEvents.json" />
+    <EmbeddedResource Include="Images\plus.png" />
   </ItemGroup>
 
   <ItemGroup>

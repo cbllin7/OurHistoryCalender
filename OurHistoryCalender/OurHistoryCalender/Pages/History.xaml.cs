@@ -24,6 +24,10 @@ namespace OurHistoryCalender.Pages
             InitializeComponent();
             _calenderEventService = new CalenderEventService();
             listView.ItemsSource = _calenderEventService.getDaysInHistory();
+            Image image = new Image
+            {
+                Source = "Images.plus.png"
+            };
         }
 
         void OnItemClickAsync(object sender, ItemTappedEventArgs e)
