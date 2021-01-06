@@ -10,9 +10,8 @@
             <Label Text="Add Day in history"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="DayInHistory" Placeholder="Day In History" Text="{Binding newDayInHistory.DayInHistoryTitle}"/>
-            
-            <Entry Placeholder="About Day" Text="{Binding newDayInHistory.BriefDescription}"/>
+            <Entry x:Name="DayInHistory" x:DataType="DatePicker" Placeholder="Day In History" />
+            <Entry x:Name="AboutDay" Placeholder="About Day" />
             <Button Clicked="Button_Clicked" Text="Add Day" />
         </StackLayout>
     </ContentPage.Content>

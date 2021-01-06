@@ -90,9 +90,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\OurHistoryCalender\OurHistoryCalender.csproj">
       <Project>{18CFFF41-E3C5-47DC-98E9-3762A7C2DCF1}</Project>
       <Name>OurHistoryCalender</Name>
@@ -100,9 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\plus2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\cross.png" />

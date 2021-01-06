@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,7 +24,8 @@ namespace OurHistoryCalender.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Debug.WriteLine(newDayInHistory);
+            var a = DayInHistory.Text;
+            Debug.WriteLine(a);
         }
     }
 }
